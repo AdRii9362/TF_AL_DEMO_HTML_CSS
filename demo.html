@@ -1,0 +1,202 @@
+<!-- POUR ENREGISTRER => CTRL + S -->
+
+<!DOCTYPE html> <!-- DOCTYPE precise que la vue sera en HTML-->
+<html> <!--balise d ouverture-->
+    <head> <!--structure de base -->
+        <title><!-- Stipule le nom de la page-->
+                Demonstration HTML-CSS
+                <!-- Lien css qui cree la liaison entre le fichier HTML e tle fichier CSS -->
+                <!-- Caractere d encodage (ASCI) -->
+        </title>
+
+        <!-- laision avec le css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    <body> <!-- Structure de notre page-->
+        <nav> <!-- balise structurante pour la navigation // ses proprietes sont a realiser dans le CSS -->
+            <ul>
+                <li><a href="#Titres">Titres</a></li>
+                <li><a href="#Paragraphes">Paragraphes</a></li>
+            </ul>
+        </nav>
+        <h1><!-- Pouvoir determiner des titres//sous titre-->
+            Test
+            <fieldset> <!-- Cree un encadrement-->
+                <legend>    
+                    <h2 id="ancre">Titre de l encadrement</h2>
+                </legend>
+
+                <fieldset>
+                    <legend>
+                        <h3>Les balises de texte</h3>
+                    </legend>
+                </fieldset>
+                
+                    <h4 id="Paragraphes">Paragraphe</h4>
+                    <p class="ConfigPerso">Lorem, ipsum dolor.</p> <!-- Lorem genere un texte au hasard => Lorem + tab // lorem3 = 3 mots // lorem3*3 = 3mots sur 3 lignes-->
+                    <hr> <!-- hr met un retour a la ligne avec une ligne visuel-->
+                    <h5 id="Titre">Titres</h5> <!-- Les titres doivent avoir un seul h1 par balise, il y a 6 niveaux de h qui se diferencie par la taille de la syntaxe-->
+                        <h1>JE SUIS LE TITRE 1</h1>
+                        <h2>JE SUIS LE TITRE 2</h2>
+                        <h3>JE SUIS LE TITRE 3</h3>
+                        <h4>JE SUIS LE TITRE 4</h4>
+                        <h5>JE SUIS LE TITRE 5</h5>
+                        <h6>JE SUIS LE TITRE 6</h6>
+
+                            <h4>La mise en valeur (faire de l analyse ou du debug)</h4>
+
+                        <p><strong> je suis en gras</strong><!-- mets un texte en gras--></p> <!-- p pour paragra^he-->
+                        <p><em>je suis en italique</em><!--mets un texte en italique--></p>
+
+                        <p><mark>Surligné un texte</mark></p>
+
+                        <h4>Listes non ordonnée</h4>
+                        <ul> <!--liste non ordonnée // met des * devant les elements-->
+                            <li> element 1</li> <!-- ajout element liste-->
+                            <li>element 2</li>
+                            <li> element 3</li>
+                            <li>
+                                <dl>
+                                    <dt>terme test</dt>
+                                    <dd>definition terme test</dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h4> liste ordonnée</h4>
+
+                        <ol><!--liste ordonnée // met des numero devant les elements-->
+                            <li> element 1</li> <!-- ajout element liste-->
+                            <li>element 2</li>
+                            <li> element 3</li>
+                            <li>
+                                <dl>
+                                    <dt>terme test</dt>
+                                    <dd>definition terme test</dd>
+                                </dl>
+                            </li>       
+                        </ol>
+
+                        <h4>les liens</h4>
+                        <!-- 
+                            a + tab => href : redirige vers un lien externe, vers un fichier, vers un ancrage (ex:si je clique sur un btn je reviens en arriere)
+                         -->
+                        <p><a href="https://github.com/AdRii9362">Lien GitHub</a></p>
+                        <p><a href="testRedirection.html">Redirection vers un fichier HTML dans le meme dossier</a></p>
+                        <p><a href="#ancre">Retour</a></p> <!-- placer l id la ou on veut rediriger-->
+
+                        <hr>    
+
+                        <h4>les images</h4>
+                        <img src="assets/img/TestImage.jpg" alt="Image du pont" title="Info bulle de mon image" height="300"> <!-- img + tab // rajouter tittle !!!height modifie la taille automatiquement de la largeur!!! alt permet de placer un descriptif en cas ou l image est mal chargée-->
+
+                        <figure> <!--permet d ajouter des elements à l image-->
+                            <img src="assets/img/TestImage.jpg" alt="Image du pont" title="Info bulle de mon image" height="300">
+                            <figcaption>Voici une image</figcaption> <!-- figcaption permet de mettre une phrase liée a l image-->
+                        </figure>
+
+
+                        <h4>
+                            <dt> <!-- definition type => dictionnaire-->
+                                <dt>Terme 1</dt>
+                                <dd>La definition</dd>
+                            </dt>
+                        </h4>
+
+                            <a href="https://dokkanthread.netlify.app/threads/index.html" target="_blank"><img src="assets/img/TestImage.jpg" height="150" alt=""></a> <!--ouvre un lien a  partir d une image // target blank permet d ouvrir une autre page !!cette maniere n est pas a tenir en compte car il faut realiser dans CSS-->
+
+
+
+                        <h4>formulaires</h4>
+
+                        <fieldset> 
+                            <legend>
+                                Inscription
+                            </legend>
+                                <form>
+                                    <div>
+
+                                        <!-- label -->
+                                        <label for="nom">Nom</label>
+                                        <!-- input -->
+                                        <input type="text" name="nom" id="nom"> <!--name relie l information a mon input-->
+                                        
+                                        <!-- label -->
+                                        <label for="prenom">Prenom</label>
+                                        <!-- input -->
+                                        <input type="text" name="prenom" id="prenom"> <!--name relie l information a mon input-->
+                                    </div>
+
+                                    <p>Veuillez renseigner vos competences : </p>
+                                    <!-- btn checkbox -->
+                                    <div>
+                                        <label for="html">HTML</label>
+                                        <input type="checkbox" name="html">
+
+                                        <label for="css">CSS</label>
+                                        <input type="checkbox" name="css">
+
+                                        <label for="c#">C#</label>
+                                        <input type="checkbox" name="c#">
+                                    </div>
+
+
+                                    <!-- btn radio -->
+                                    <p>etes vous majeur?</p>
+                                    
+                                    <div>
+                                        <label for="estMAJEUR">Majeur</label>
+                                        <input type="radio" name="estMAJEUR" id="estMAJEUR">
+
+                                        <label for="estMineur">Mineur</label>
+                                        <input type="radio" name="estMAJEUR" id="estMineur"> <!-- il faut le meme name entre les deux btn radios pour creer une liaison entre eux et recup l info-->
+
+                                    </div>
+
+                                    <input type="date"> <!-- calendrier-->
+
+                                    <div>
+                                        <label for="description">Desciption</label>
+                                        <textarea name="description" id="description" cols="30" rows="10"></textarea> <!-- cree une text box-->
+                                    </div>
+
+                                    <button type="submit">Valider</button> <!-- genere un btn valider qui submit donc envoie les infos-->
+                                    <button type="reset">Reset</button> <!-- genere un btn reset qui reset-->
+                                </form>
+
+                                <h4>tableaux</h4>
+
+                                <table>
+                                    <tr> <!--tr => cree une ligne de tableau-->
+                                        <!-- td*3 + enter genere 3 td -->
+                                        <td>Nom</td> <!--td => cree une colonne de tableau-->
+                                        <td>Prénom</td>
+                                        <td>Âge</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Romano</td>
+                                        <td>Adriano</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Murena</td>
+                                        <td>Danae</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gerard</td>
+                                        <td>Valery</td>
+                                        <td>39</td>
+                                    </tr>
+                                    <!-- on cree le fichier css pour le style et on cree la liaison dans le head -->
+                                </table>
+
+
+                        </fieldset>
+
+                        
+            </fieldset>
+        </h1>
+    </body>
+</html> <!--balise de fermeture-->
